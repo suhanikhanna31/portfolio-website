@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Experience — Suhani Khanna</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><div class="film"></div><nav><div class="wrap nav"><a class="brand" href="index.html">Suhani Khanna</a><div class="links"><a href="experience.html" class="on">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="soft-skills.html">Soft skills</a><a href="code.html">Code samples</a><a href="certifications.html">Certifications</a></div></div></nav><section id="experience"><div class="wrap">
+<div class="sh"><h2>Work experience</h2></div>
+<article class="card">
+<div class="meta">IBM · AI Intern · Jun 2026 – Aug 2026</div>
+<h3>Signal: Behavioral &amp; Psycholinguistic Insider-Threat Detection</h3>
+<p class="sub">An end-to-end Python service on real CERT r4.2 email data: ingestion, anonymization, drift scoring, FastAPI, Neon PostgreSQL, a dashboard, and CI. Delivered with mentor review against defined tasks.</p>
+<div class="map">
+<div><b>Programming &amp; implementation</b><span>Modular pipeline (ingest → validate → anonymize → features → baseline → drift → models). Streamed a ~2.6M-row file with chunked reads and reservoir sampling into a 10K-message, 942-user run.</span></div>
+<div><b>Secure, scalable by design</b><span>HMAC-SHA256 pseudonymization, consent gating, no raw text persisted. Four custom structures: sliding-window stats O(1) amortized, Aho-Corasick O(text + matches), bounded heap O(N log K), LRU cache.</span></div>
+<div><b>Testing &amp; Quality Assurance</b><span>29 pytest tests, including zero-variance baselines and a guardrail test that human review can never be switched off. GitHub Actions runs the suite on every push.</span></div>
+<div><b>Audit compliance</b><span>Append-only, hash-chained audit log; verify-chain admin action; every drift flag, prediction and agent step is logged. Consent revocation needs explicit confirmation.</span></div>
+<div><b>Researching alternatives</b><span>Replaced lexicon sentiment with a transformer, NLTK with spaCy; chose TF-IDF over embeddings for RAG under a 512MB limit; moved IBM Cloud Code Engine to Vercel + Neon after a billing blocker.</span></div>
+<div><b>Documentation</b><span>Wrote a formal project report, README, architecture and ethics/privacy docs, with limitations stated plainly (no labels on real data, known 503 on the monitor route).</span></div>
+<div><b>Metrics &amp; reporting</b><span>metrics.json per training run with SHAP rankings; real-run stats (654 of 10K messages drift-flagged, 6.5%); OpenScale-style monitor snapshots; fairness audit per run.</span></div>
+<div><b>Process improvement</b><span>Fixed a placeholder explainer to call the real endpoint, added deterministic feature attribution so explanations don’t depend on an LLM, and extended the audit trail to the RAG and agent features.</span></div>
+</div>
+<div class="btns"><a class="btn f" href="https://suhani-pbel-3-0-ffz4.vercel.app">Live dashboard</a><a class="btn" href="https://github.com/suhanikhanna31/Suhani_PBEL_3.0">GitHub</a><a class="btn" href="#report">Project report</a></div>
+<p class="stamp">Python · FastAPI · PostgreSQL · scikit-learn · LangGraph · watsonx.ai · GitHub Actions</p>
+</article>
+
+<article class="card" id="report">
+<div class="meta">Documentation · Signal Project Report</div>
+<h3>A 13-section report that says what the system doesn’t do</h3>
+<p>Written to explain the design to a reviewer, not just describe it. It covers the problem, privacy architecture (consent, pseudonymization, minimization), EDA, feature engineering, the toolchain choices, data-structure complexity, supervised and unsupervised results, the watsonx governance layer, deployment, and the challenges hit along the way.</p>
+<div class="map">
+<div><b>Honest evaluation</b><span>Supervised metrics are reported only from the labelled synthetic run. The real CERT sample has no labels, so it reports only drift, IsolationForest and DBSCAN results.</span></div>
+<div><b>Documented trade-offs</b><span>Transformer sentiment is more accurate but less auditable than a lexicon. IBM Cloud was blocked by billing, so the report explains the move to Vercel and Neon.</span></div>
+<div><b>Explained for newcomers</b><span>Each technique gets an everyday analogy (Wordle baselines, word-search for Aho-Corasick, leaderboards for heaps) before the maths.</span></div>
+<div><b>Reproducible</b><span>Every figure traces to a run; sections cross-reference code paths and tests.</span></div>
+</div>
+<div class="btns"><a class="btn f" href="https://github.com/suhanikhanna31/Suhani_PBEL_3.0/blob/main/Signal_Project_Report.pdf">Read the report (PDF)</a></div>
+</article>
+
+<article class="card"><div class="meta">Also in my experience</div><div class="grid2" style="margin-top:6px">
+<div class="soft"><h3>Open-source maintainer, Pikopod</h3><p>Go, 80 GitHub stars. Ships GitHub Actions and turns third-party API failures into deterministic, replayable tests, with an MCP server for coding agents and a CI replay gate.</p></div>
+<div class="soft"><h3>Fellow, Keploy API Fellowship</h3><p>Reproduces open bugs on the main branch and tests open pull requests for Keploy, an open-source API testing tool written in Go. Also fixed agent-lane deadlocks and a symlink workspace escape in OpenDot.</p></div></div></article>
+</div></section><div class="wrap"><a class="back" href="index.html">← Back to home</a></div><footer id="contact"><div class="wrap"><h2>Let’s build something that survives the demo.</h2>
+<div class="btns"><a class="btn" href="mailto:suhanikhanna31@gmail.com">suhanikhanna31@gmail.com</a><a class="btn" href="https://github.com/suhanikhanna31/">GitHub</a><a class="btn" href="https://www.linkedin.com/in/suhaani-khanna/">LinkedIn</a></div>
+<p class="stamp" style="color:#bdb6a8">© 2026 Suhani Khanna</p></div></footer></body></html>
