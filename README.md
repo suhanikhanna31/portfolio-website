@@ -1,3 +1,4 @@
+https://suhanikhanna31.github.io/portfolio-website/
 # Suhani Khanna — Portfolio
 
 Static site, no build step. Open `index.html`, or deploy with GitHub Pages (Settings → Pages → Deploy from branch → `main` / root).
